@@ -1,0 +1,306 @@
+{
+  "kind": "build_request",
+  "title": "Build SEO-optimized marketing website for Online Tax Consultant with services, CTAs, testimonials, FAQ, blog, and WhatsApp contact",
+  "projectName": "Online Tax Consultant",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a clean, modern, corporate visual theme for the “Online Tax Consultant” website using blue and white as primary colors with subtle green accents; apply the theme consistently across typography, spacing, layout, and component styles for a trustworthy financial-services look.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "The design should use blue, white, and subtle green colors to represent trust and financial growth.",
+          "The website should look clean, corporate, and easy to navigate."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All main pages share a consistent header, footer, typography scale, and spacing system.",
+        "Primary and accent colors reflect blue/white with subtle green highlights (buttons, badges, icons, or section accents).",
+        "UI is responsive and readable on mobile, tablet, and desktop."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement site-wide navigation and routing for these pages: Home, Services (overview), individual Service detail pages (7 services), Pricing, Testimonials, Blog, Contact, Privacy Policy, and Terms & Conditions.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Add testimonial section, FAQ section, service pages, and contact form with WhatsApp integration.",
+          "✅ EXTRA PAGES YOU CAN ADD * Blog ... * Pricing Page * Testimonials * Contact Page * Privacy Policy * Terms & Conditions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Top navigation provides clear links to Home, Services, Pricing, Blog, Testimonials, and Contact.",
+        "Footer includes links to Privacy Policy and Terms & Conditions.",
+        "Each page renders with a clear H1 and supporting sections."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build the Home page using the provided SEO-optimized content, including: the exact H1 “Online Tax Consultant – Trusted Tax Filing & GST Experts in India”, the provided intro paragraph, and a prominent CTA area that includes the three bullet CTAs (File ITR in Minutes, Get GST Registration in 3 Days, Free Tax Consultation Available).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "### H1:\n\nOnline Tax Consultant – Trusted Tax Filing & GST Experts in India",
+          "### Intro Paragraph:\n\nWelcome to **Online Tax Consultant** ...",
+          "### CTA:\n\n✔ File Your ITR in Minutes\n✔ Get GST Registration in 3 Days\n✔ Free Tax Consultation Available"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page H1 matches the provided text exactly.",
+        "Home page includes the provided intro paragraph content in readable, keyword-rich copy.",
+        "Home page displays a prominent CTA block above the fold (or near top) containing all three CTA bullets."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add strong, persistent call-to-action buttons across the site (at minimum in hero/header and at relevant sections): “Book Free Consultation”, “File Your ITR Now”, and “Talk to Tax Expert”, each linking to the Contact page and/or opening the WhatsApp flow (as applicable).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Include strong call-to-action buttons like “Book Free Consultation”, “File Your ITR Now”, and “Talk to Tax Expert”.",
+          "...contact form with WhatsApp integration."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All three CTAs appear on the Home page and at least one other page (e.g., Services overview).",
+        "CTA buttons are visually prominent and consistent with the design theme.",
+        "At least one CTA triggers WhatsApp contact (via a wa.me link) with a prefilled message including “Online Tax Consultant”."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a Services overview page listing all 7 services with short summaries, key benefits, and internal links to dedicated service detail pages; include the provided SEO keywords and the provided service-specific content for each service detail page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "# ✅ SERVICES YOU CAN INCLUDE",
+          "Keywords: ITR filing online, income tax return filing India, file ITR online, tax filing consultant",
+          "We provide hassle-free and accurate ITR filing services...",
+          "Keywords: GST registration online...",
+          "...and the remaining 5 services with their keywords/content"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Services overview page lists exactly these services: ITR Filing; GST Registration & Filing; Business Registration Services; Tax Planning & Advisory; TDS Return Filing; Accounting & Bookkeeping; Notice & Compliance Handling.",
+        "Each service detail page includes the provided service content text and prominently displays the provided keywords (naturally in headings/paragraphs, not as a spammy list).",
+        "Each service detail page includes at least one CTA button leading to Contact/WhatsApp."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add an About/Why Choose Us section using the provided About Us text, the provided target keywords, and the “Why Choose Us” bullet list; place it on the Home page and/or as part of a dedicated About section within the Home page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "# ✅ ABOUT US SECTION",
+          "Online Tax Consultant is a team of experienced tax professionals...",
+          "Keywords:\ntax consultant India, online tax advisor, professional tax services",
+          "# ✅ WHY CHOOSE US\n\n* 100% Secure & Confidential\n* Expert Chartered Accountants\n* Affordable Pricing\n* Fast Turnaround Time\n* Dedicated Support"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About content is present and readable, not placeholder text.",
+        "Why Choose Us displays all five provided bullet points.",
+        "Section includes at least one CTA leading to Contact/WhatsApp."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create a Testimonials section (and dedicated Testimonials page) featuring multiple testimonials relevant to Indian individuals and small businesses; ensure the section is professionally styled and includes a CTA.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Add testimonial section...",
+          "* Testimonials"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page includes a testimonials section with at least 4 testimonials.",
+        "Testimonials page lists the same or more testimonials with consistent styling.",
+        "Each testimonial includes at least a name (or initials), customer type (e.g., salaried, freelancer, small business), and a short quote."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create an FAQ section using the 5 provided FAQ questions and supply clear, professional answers tailored to the services offered; place the FAQ section on the Home page and optionally on Services/Contact pages as well.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "# ✅ FAQ SECTION\n\n1. How can I file ITR online?\n2. What documents are required for GST registration?\n3. Is online tax filing safe?\n4. How long does company registration take?\n5. Can you handle income tax notices?"
+        ]
+      },
+      "acceptanceCriteria": [
+        "FAQ section includes exactly the five provided questions in the same wording.",
+        "Each question has a visible answer (e.g., accordion) written in clear English.",
+        "FAQ section is accessible (keyboard navigable, clear focus states)."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement a Contact page with a contact form (name, email/phone, service interested in, message) and WhatsApp integration via a WhatsApp click-to-chat link; submitting the form must show a success/failure state in the UI.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "...contact form with WhatsApp integration."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact page displays a form with at least: full name, phone or email, service selection, and message.",
+        "WhatsApp button/link opens WhatsApp click-to-chat (wa.me) with a prefilled message that includes the selected service when available.",
+        "Form submission provides user feedback (loading, success, error)."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add backend support to store contact form submissions (“leads”) in the single Motoko actor, including creating a lead record with timestamp and returning an acknowledgement; expose query methods to list leads for admin/debug purposes (no public admin UI required).",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "...contact form..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Lead submission is persisted in the canister across refreshes (stable storage as needed).",
+        "A backend method exists to create a lead and returns a success response to the frontend.",
+        "A backend query method exists to list leads (for testing), and it does not crash on empty data."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Implement SEO basics across the site: set the provided Meta Title, Meta Description, and Meta Keywords; ensure each page has a clear H1 and appropriate H2 section headings; ensure service pages contain keyword-rich content matching the provided keyword sets.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Website should be SEO optimized with proper headings (H1, H2), meta tags, and keyword-rich content.",
+          "# ✅ META TAGS\n\nMeta Title ...\nMeta Description ...\nMeta Keywords ..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The HTML document includes the provided meta title/description/keywords (site-wide baseline).",
+        "Each page renders exactly one primary H1 and uses H2s for major sections.",
+        "Service pages contain the provided keyword themes in natural prose."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Create a Blog page with a list of at least 6 starter posts (Tax Saving Tips, ITR Updates, GST Rules themes) and individual blog post pages with readable formatting; content can be static (no CMS required).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "* Blog (Tax Saving Tips, ITR Updates, GST Rules)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Blog page lists at least 6 posts with title, date (or “Updated”), and excerpt.",
+        "Clicking a post opens a dedicated blog post page.",
+        "Blog pages include proper headings and internal links back to Services/Contact."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Create a Pricing page with clear, professional pricing tiers for at least: ITR filing, GST filing, and Business registration; include disclaimers that final pricing may vary by complexity and a CTA to contact/WhatsApp for a quote.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "* Pricing Page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Pricing page displays at least 3 pricing cards/tiers with included items.",
+        "Pricing page includes a brief disclaimer about variability by complexity.",
+        "Pricing page includes at least one prominent CTA to Contact/WhatsApp."
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Add Privacy Policy and Terms & Conditions pages with professional, generic content suitable for an Indian online tax consultancy website (no external integrations implied) and include these links in the site footer.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "* Privacy Policy",
+          "* Terms & Conditions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Privacy Policy page is accessible from the footer and renders readable sectioned text.",
+        "Terms & Conditions page is accessible from the footer and renders readable sectioned text.",
+        "No references are made to unsupported integrations (e.g., email providers, third-party auth)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must remain a single Motoko actor (all logic in backend/main.mo); add a migration file only if stable state upgrades are required.",
+    "Do not edit files under frontend/src/components/ui; compose those UI components from outside that directory if needed.",
+    "Do not modify any frontend paths marked immutable by the system context (e.g., useInternetIdentity/useActor/main.tsx); implement app features in new or editable files instead.",
+    "No third-party authentication other than Internet Identity (not required for this marketing site).",
+    "No external email/SMS providers; contact form handling must be on-canister storage + WhatsApp click-to-chat link for direct messaging."
+  ],
+  "nonGoals": [
+    "Building a real-time chat system.",
+    "Implementing payments or checkout for pricing.",
+    "Implementing a full CMS with admin authoring UI for blog posts.",
+    "Integrating external CRM, email marketing tools, or analytics platforms."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Minimal corporate logo mark with wordmark “Online Tax Consultant” in blue/white with subtle green accent (otc-logo.dim_512x256.png)",
+      "Clean abstract finance-themed hero background with subtle geometric shapes in blue/white/green (hero-bg.dim_1920x1080.png)",
+      "Set of 7 simple outline-style service icons consistent in stroke and color accents (service-icons-sprite.dim_1024x1024.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

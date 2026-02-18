@@ -1,0 +1,420 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Online Tax Consultant – SEO marketing website (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Establish a clean, modern corporate visual theme (blue/white with subtle green accents) applied consistently across the site.",
+      "acceptanceCriteria": [
+        "All main pages share a consistent header, footer, typography scale, and spacing system.",
+        "Primary and accent colors reflect blue/white with subtle green highlights (buttons, badges, icons, or section accents).",
+        "UI is responsive and readable on mobile, tablet, and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styles (Tailwind base + CSS variables/tokens) to implement the blue/white theme with subtle green accents, consistent typography scale, spacing, and accessible focus states across pages."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme extensions to align primary/accent color tokens with the blue/white/green brand palette and ensure consistent container/typography defaults."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a reusable site layout wrapper with consistent header/footer placement and responsive spacing for all pages."
+        },
+        {
+          "path": "frontend/public/assets/generated/otc-logo.dim_512x256.png",
+          "operation": "create",
+          "description": "Add generated brand logo asset at this exact path and wire it into the header/footer brand area where applicable."
+        },
+        {
+          "path": "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add generated hero background asset at this exact path and use it on the Home page hero section for a clean corporate look."
+        },
+        {
+          "path": "frontend/public/assets/generated/service-icons-sprite.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add generated service icon sprite asset at this exact path and use it on Services overview and service detail pages for consistent iconography."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement site-wide navigation and routing for all required pages including 7 service detail routes and blog post routes.",
+      "acceptanceCriteria": [
+        "Top navigation provides clear links to Home, Services, Pricing, Blog, Testimonials, and Contact.",
+        "Footer includes links to Privacy Policy and Terms & Conditions.",
+        "Each page renders with a clear H1 and supporting sections."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app root with client-side routing and route registration for Home, Services overview, 7 service detail pages, Pricing, Testimonials, Blog, Contact, Privacy Policy, and Terms & Conditions (and blog post pages)."
+        },
+        {
+          "path": "frontend/src/components/layout/Header.tsx",
+          "operation": "create",
+          "description": "Create a responsive header with top navigation links to Home, Services, Pricing, Blog, Testimonials, and Contact; include prominent CTAs as required."
+        },
+        {
+          "path": "frontend/src/components/layout/Footer.tsx",
+          "operation": "create",
+          "description": "Create a consistent footer with links to Privacy Policy and Terms & Conditions plus secondary navigation/back-to-top and brand info."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Wire Header and Footer into the layout and ensure all routed pages render inside the shared layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build the Home page with the provided SEO-optimized H1, intro paragraph, and prominent above-the-fold CTA bullets.",
+      "acceptanceCriteria": [
+        "Home page H1 matches the provided text exactly.",
+        "Home page includes the provided intro paragraph content in readable, keyword-rich copy.",
+        "Home page displays a prominent CTA block above the fold (or near top) containing all three CTA bullets."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Implement the Home page content including the exact H1 “Online Tax Consultant – Trusted Tax Filing & GST Experts in India”, the provided intro paragraph, and a prominent CTA area with the three bullet CTAs; incorporate the hero background from frontend/public/assets/generated/hero-bg.dim_1920x1080.png."
+        },
+        {
+          "path": "frontend/src/content/homeContent.ts",
+          "operation": "create",
+          "description": "Add a single source of truth for the provided Home page SEO copy (H1, intro paragraph, CTA bullets) to avoid drift and enable reuse in meta/structured sections."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add persistent, prominent CTAs site-wide linking to Contact and WhatsApp click-to-chat with a prefilled message.",
+      "acceptanceCriteria": [
+        "All three CTAs appear on the Home page and at least one other page (e.g., Services overview).",
+        "CTA buttons are visually prominent and consistent with the design theme.",
+        "At least one CTA triggers WhatsApp contact (via a wa.me link) with a prefilled message including “Online Tax Consultant”."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/cta/PrimaryCtas.tsx",
+          "operation": "create",
+          "description": "Create reusable CTA button group(s) for “Book Free Consultation”, “File Your ITR Now”, and “Talk to Tax Expert”, styled consistently with the theme and usable in header/hero/sections."
+        },
+        {
+          "path": "frontend/src/utils/whatsapp.ts",
+          "operation": "create",
+          "description": "Create a utility to build wa.me click-to-chat URLs with a prefilled message that includes “Online Tax Consultant” and optionally includes the selected service."
+        },
+        {
+          "path": "frontend/src/components/layout/Header.tsx",
+          "operation": "modify",
+          "description": "Place persistent CTA buttons in the header/hero area using the shared CTA components and wire at least one CTA to open the WhatsApp flow built via the WhatsApp utility."
+        },
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "modify",
+          "description": "Add at least one prominent CTA block on the Services overview page using the shared CTA components and linking to Contact/WhatsApp."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Ensure the Home page hero/near-top CTA block uses the shared CTA components and includes at least one WhatsApp-triggering CTA."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create a Services overview page and 7 service detail pages using the provided service content and SEO keywords, each with CTAs to Contact/WhatsApp.",
+      "acceptanceCriteria": [
+        "Services overview page lists exactly these services: ITR Filing; GST Registration & Filing; Business Registration Services; Tax Planning & Advisory; TDS Return Filing; Accounting & Bookkeeping; Notice & Compliance Handling.",
+        "Each service detail page includes the provided service content text and prominently displays the provided keywords (naturally in headings/paragraphs, not as a spammy list).",
+        "Each service detail page includes at least one CTA button leading to Contact/WhatsApp."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/services.ts",
+          "operation": "create",
+          "description": "Create a structured static dataset for the 7 services (slug, title, summary, key benefits, provided keyword themes, provided long-form content) to power overview and detail pages."
+        },
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "create",
+          "description": "Implement the Services overview page listing all 7 services with short summaries, key benefits, internal links to each service detail page, and consistent service icon usage via frontend/public/assets/generated/service-icons-sprite.dim_1024x1024.png."
+        },
+        {
+          "path": "frontend/src/pages/ServiceDetailPage.tsx",
+          "operation": "create",
+          "description": "Implement a service detail page template that renders the provided service-specific content and keyword-rich headings naturally; include at least one CTA to Contact/WhatsApp using the shared CTA components."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire Services overview and 7 service detail routes into the router, using service slugs from the services content dataset."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add an About/Why Choose Us section on the Home page using the provided text, keywords, and bullet list, with a CTA to Contact/WhatsApp.",
+      "acceptanceCriteria": [
+        "About content is present and readable, not placeholder text.",
+        "Why Choose Us displays all five provided bullet points.",
+        "Section includes at least one CTA leading to Contact/WhatsApp."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/about.ts",
+          "operation": "create",
+          "description": "Add the provided About Us text, target keywords, and the full “Why Choose Us” bullet list in a reusable content module."
+        },
+        {
+          "path": "frontend/src/components/sections/AboutWhyChooseUsSection.tsx",
+          "operation": "create",
+          "description": "Create an About/Why Choose Us section component rendering the provided text and all five bullet points, including at least one CTA to Contact/WhatsApp."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Place the About/Why Choose Us section on the Home page (as a dedicated section) and ensure it contains the required CTA."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create a testimonials section on Home and a dedicated Testimonials page with professionally styled testimonials and a CTA.",
+      "acceptanceCriteria": [
+        "Home page includes a testimonials section with at least 4 testimonials.",
+        "Testimonials page lists the same or more testimonials with consistent styling.",
+        "Each testimonial includes at least a name (or initials), customer type (e.g., salaried, freelancer, small business), and a short quote."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/testimonials.ts",
+          "operation": "create",
+          "description": "Add a static testimonials dataset (>= 4) relevant to Indian individuals and small businesses, including name/initials, customer type, and quote."
+        },
+        {
+          "path": "frontend/src/components/sections/TestimonialsSection.tsx",
+          "operation": "create",
+          "description": "Create a reusable testimonials section component (grid/cards) with professional styling and an embedded CTA to Contact/WhatsApp."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add the TestimonialsSection to the Home page and ensure it displays at least 4 testimonials."
+        },
+        {
+          "path": "frontend/src/pages/TestimonialsPage.tsx",
+          "operation": "create",
+          "description": "Implement the dedicated Testimonials page listing the same or more testimonials with consistent styling and a CTA."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Testimonials page route into the router and ensure header navigation links correctly."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create an accessible FAQ section with exactly the five provided questions and professional answers, placed on Home (and optionally elsewhere).",
+      "acceptanceCriteria": [
+        "FAQ section includes exactly the five provided questions in the same wording.",
+        "Each question has a visible answer (e.g., accordion) written in clear English.",
+        "FAQ section is accessible (keyboard navigable, clear focus states)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/faq.ts",
+          "operation": "create",
+          "description": "Add exactly the five provided FAQ questions (verbatim) along with clear, professional answers tailored to the offered services."
+        },
+        {
+          "path": "frontend/src/components/sections/FaqSection.tsx",
+          "operation": "create",
+          "description": "Create an accessible FAQ section using the shadcn-ui Accordion component to support keyboard-navigable expand/collapse behavior. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add the FAQ section to the Home page and ensure the questions match the provided wording exactly."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Implement a Contact page with a lead form and WhatsApp click-to-chat integration, including UI loading/success/error states.",
+      "acceptanceCriteria": [
+        "Contact page displays a form with at least: full name, phone or email, service selection, and message.",
+        "WhatsApp button/link opens WhatsApp click-to-chat (wa.me) with a prefilled message that includes the selected service when available.",
+        "Form submission provides user feedback (loading, success, error)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "create",
+          "description": "Create the Contact page including a form (full name, phone/email, service interested in, message), a WhatsApp click-to-chat CTA using the WhatsApp utility, and clear loading/success/error UI states for form submission."
+        },
+        {
+          "path": "frontend/src/hooks/useSubmitLead.ts",
+          "operation": "create",
+          "description": "Create a hook that uses useActor to call the backend capability submitLead(name, contactInfo, serviceInterested, message) and returns mutation state (loading/success/error) for the Contact form UI."
+        },
+        {
+          "path": "frontend/src/components/forms/LeadForm.tsx",
+          "operation": "create",
+          "description": "Create a reusable LeadForm component that validates required fields, calls the submit-lead hook on submit, and exposes submission state to render success/failure feedback."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Wire the LeadForm component into the Contact page and ensure the WhatsApp prefilled message includes the selected service when available."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Contact page route into the router and ensure all CTAs link to it appropriately."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Implement SEO basics: provided meta title/description/keywords baseline, per-page H1/H2 structure, and keyword-rich service content.",
+      "acceptanceCriteria": [
+        "The HTML document includes the provided meta title/description/keywords (site-wide baseline).",
+        "Each page renders exactly one primary H1 and uses H2s for major sections.",
+        "Service pages contain the provided keyword themes in natural prose."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add the provided Meta Title, Meta Description, and Meta Keywords as a site-wide baseline in the HTML head, and ensure the document language/viewport remain correct."
+        },
+        {
+          "path": "frontend/src/utils/seo.ts",
+          "operation": "create",
+          "description": "Create a small SEO utility/hook to set per-page document title and update description/keywords meta tags at runtime when navigating between routes (without introducing external analytics)."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Ensure Home has exactly one H1 and uses H2s for major sections (Services preview/About/Testimonials/FAQ), and set page-specific title/description via the SEO utility."
+        },
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "modify",
+          "description": "Ensure Services overview has exactly one H1 and uses H2s for major sections; set page-specific meta via the SEO utility."
+        },
+        {
+          "path": "frontend/src/pages/ServiceDetailPage.tsx",
+          "operation": "modify",
+          "description": "Ensure each service detail page has exactly one H1, appropriate H2s, and includes the provided keyword themes naturally in headings/paragraphs; set page-specific meta via the SEO utility."
+        },
+        {
+          "path": "frontend/src/pages/BlogPage.tsx",
+          "operation": "modify",
+          "description": "Ensure Blog listing page has exactly one H1 with H2s for major sections and sets page-specific meta via the SEO utility."
+        },
+        {
+          "path": "frontend/src/pages/BlogPostPage.tsx",
+          "operation": "modify",
+          "description": "Ensure each blog post page has exactly one H1, uses H2s for sections, and sets page-specific meta via the SEO utility."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Create a static Blog listing page with at least 6 starter posts and individual blog post pages with readable formatting and internal links.",
+      "acceptanceCriteria": [
+        "Blog page lists at least 6 posts with title, date (or “Updated”), and excerpt.",
+        "Clicking a post opens a dedicated blog post page.",
+        "Blog pages include proper headings and internal links back to Services/Contact."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/blogPosts.ts",
+          "operation": "create",
+          "description": "Add at least 6 starter blog posts (Tax Saving Tips, ITR Updates, GST Rules themes) as static content with slug, title, updated/date label, excerpt, and full post body sections."
+        },
+        {
+          "path": "frontend/src/pages/BlogPage.tsx",
+          "operation": "create",
+          "description": "Create the Blog page listing posts with title, date/updated, excerpt, and links to individual blog post pages; include internal links back to Services and Contact."
+        },
+        {
+          "path": "frontend/src/pages/BlogPostPage.tsx",
+          "operation": "create",
+          "description": "Create an individual blog post page with readable formatting (headings/paragraphs/lists), and include clear internal links to relevant Services and to Contact/WhatsApp."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Blog listing route and blog post routes (by slug) into the router and ensure header navigation links to Blog."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Create a professional Pricing page with tiers for ITR filing, GST filing, and Business registration, including disclaimers and CTA to Contact/WhatsApp.",
+      "acceptanceCriteria": [
+        "Pricing page displays at least 3 pricing cards/tiers with included items.",
+        "Pricing page includes a brief disclaimer about variability by complexity.",
+        "Pricing page includes at least one prominent CTA to Contact/WhatsApp."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PricingPage.tsx",
+          "operation": "create",
+          "description": "Implement the Pricing page with at least 3 pricing tiers/cards covering ITR filing, GST filing, and Business registration, a pricing variability disclaimer, and a prominent CTA to Contact/WhatsApp."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Pricing page route into the router and ensure header navigation links to Pricing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Add Privacy Policy and Terms & Conditions pages with generic professional content and link them from the site footer.",
+      "acceptanceCriteria": [
+        "Privacy Policy page is accessible from the footer and renders readable sectioned text.",
+        "Terms & Conditions page is accessible from the footer and renders readable sectioned text.",
+        "No references are made to unsupported integrations (e.g., email providers, third-party auth)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PrivacyPolicyPage.tsx",
+          "operation": "create",
+          "description": "Create a Privacy Policy page with professional, generic content suitable for an Indian online tax consultancy site, organized with headings/sections and no references to unsupported integrations."
+        },
+        {
+          "path": "frontend/src/pages/TermsPage.tsx",
+          "operation": "create",
+          "description": "Create a Terms & Conditions page with professional, generic content suitable for an Indian online tax consultancy site, organized with headings/sections and no references to unsupported integrations."
+        },
+        {
+          "path": "frontend/src/components/layout/Footer.tsx",
+          "operation": "modify",
+          "description": "Add footer links to Privacy Policy and Terms & Conditions pages and ensure they are consistently visible site-wide."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire Privacy Policy and Terms & Conditions routes into the router."
+        }
+      ]
+    }
+  ]
+}

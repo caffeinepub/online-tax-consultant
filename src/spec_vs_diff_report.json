@@ -1,0 +1,155 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-18T07:39:55.147Z",
+  "summary": "Diff adds a TanStack Router-based multi-page frontend with shared Header/Footer layout, several content modules (home/about/faq/testimonials/services/blog posts), section components (About/Why Choose Us, FAQ accordion, Testimonials grid), hooks for submitting/leads querying, and a Motoko backend actor with lead submission + admin-only lead listing. However, several BuildRequest requirements are not evidenced in the diff summary (notably stable persistence/ack for leads, required CTAs/WhatsApp message requirements, and multiple page implementations/content counts), and some unrequested features (social links, admin access-control/secret-token initialization) appear.",
+  "missing_requirements": [
+    {
+      "id": "REQ-3",
+      "requirement": "Build the Home page using the provided SEO-optimized content, including the exact H1 and intro paragraph, and a prominent CTA area with the three bullet CTAs.",
+      "reason": "The diff shows the homeContent data, but no HomePage implementation is included in the visible diff summary to confirm the H1/intro/CTA block are actually rendered on the Home page.",
+      "evidence": [
+        "frontend/src/content/homeContent.ts",
+        "frontend/src/App.tsx (imports HomePage but HomePage file not shown)"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Add strong, persistent CTAs across the site: “Book Free Consultation”, “File Your ITR Now”, and “Talk to Tax Expert”, and ensure at least one CTA triggers WhatsApp with a prefilled message including “Online Tax Consultant”.",
+      "reason": "Header shows “Book Free Consultation” and “Talk to Tax Expert”, but there is no evidence of the “File Your ITR Now” CTA anywhere. Also, the WhatsApp message shown ('I would like to talk to a tax expert') does not include the required phrase “Online Tax Consultant” in the visible code.",
+      "evidence": [
+        "frontend/src/components/layout/Header.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Create a Services overview page listing all 7 services with summaries/benefits and links to 7 service detail pages; each detail page includes provided content+keywords and a CTA to Contact/WhatsApp.",
+      "reason": "Routing for services and service detail exists and a services content module exists, but the diff summary does not show the ServicesPage/ServiceDetailPage implementations, and the services list is truncated—cannot confirm exactly 7 services are present nor that detail pages render keywords/content and include CTAs.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/content/services.ts (truncated)"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "requirement": "Create a Testimonials section and dedicated Testimonials page with multiple testimonials and a CTA.",
+      "reason": "A TestimonialsSection component and testimonials content are provided, but the TestimonialsPage implementation is not shown in the diff summary, so it cannot be verified that the dedicated page exists and lists the same or more testimonials with a CTA.",
+      "evidence": [
+        "frontend/src/components/sections/TestimonialsSection.tsx",
+        "frontend/src/content/testimonials.ts",
+        "frontend/src/App.tsx (imports TestimonialsPage but file not shown)"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Implement a Contact page with a form (name, email/phone, service, message) + WhatsApp click-to-chat link with prefilled message including selected service; submission shows success/failure state.",
+      "reason": "There are hooks to submit leads, and routing includes ContactPage, but the ContactPage UI (form fields, WhatsApp link behavior including selected service, and UI success/error states) is not shown in the diff summary.",
+      "evidence": [
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/App.tsx (imports ContactPage but file not shown)"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "Backend stores leads persistently (stable as needed), returns an acknowledgement on create, and provides a query method to list leads for admin/debug (should not crash on empty data).",
+      "reason": "backend/main.mo stores leads in an in-memory Map with non-stable vars; no stable storage is shown, so persistence across upgrades/refreshes is not evidenced. Also submitLead returns async () (no acknowledgement payload). While getAllLeads exists, the persistence and ack parts of AC are not met in the visible backend code.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "Implement SEO basics site-wide: provided Meta Title/Description/Keywords baseline; each page has a clear H1 and appropriate H2s.",
+      "reason": "Only BlogPage shows setPageMeta usage. No evidence is provided for a site-wide baseline meta title/description/keywords or for the rest of the pages’ H1/H2 structure.",
+      "evidence": [
+        "frontend/src/pages/BlogPage.tsx",
+        "frontend/src/App.tsx (other pages imported but not shown)"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Create a Blog page listing at least 6 starter posts and individual blog post pages with formatting and internal links back to Services/Contact.",
+      "reason": "BlogPage is shown, but blogPosts content is truncated and only 3 posts are visible in the summary; BlogPostPage implementation is not shown, so it cannot be verified that there are at least 6 posts and that individual post pages exist with required internal links.",
+      "evidence": [
+        "frontend/src/pages/BlogPage.tsx",
+        "frontend/src/content/blogPosts.ts (truncated)",
+        "frontend/src/App.tsx (imports BlogPostPage but file not shown)"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "requirement": "Create a Pricing page with at least 3 tiers (ITR, GST, Business registration), include disclaimer about variability, and a CTA to Contact/WhatsApp.",
+      "reason": "PricingPage is routed/imported but its implementation is not shown in the diff summary, so pricing tiers, disclaimer, and CTAs cannot be verified.",
+      "evidence": [
+        "frontend/src/App.tsx (imports PricingPage but file not shown)"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "requirement": "Add Privacy Policy and Terms & Conditions pages with professional content and link them in the footer.",
+      "reason": "Routes for /privacy-policy and /terms exist, but the PrivacyPolicyPage and TermsPage implementations are not shown; Footer is truncated before any Privacy/Terms links are visible, so footer linkage cannot be confirmed.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/Footer.tsx (truncated)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Admin access-control initialization via secret token and admin-only leads retrieval gated by AccessControl/MixinAuthorization.",
+      "reason": "BuildRequest only asks for a query method to list leads for admin/debug purposes and does not request an authorization framework or secret-token initialization flow.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Social media outbound links/icons (Facebook/Twitter/LinkedIn/Instagram) in the site footer.",
+      "reason": "BuildRequest does not mention adding social media links.",
+      "evidence": [
+        "frontend/src/components/layout/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/layout/Header.tsx",
+    "frontend/src/components/layout/SiteLayout.tsx",
+    "frontend/src/components/sections/AboutWhyChooseUsSection.tsx",
+    "frontend/src/components/sections/FaqSection.tsx",
+    "frontend/src/components/sections/TestimonialsSection.tsx",
+    "frontend/src/content/about.ts",
+    "frontend/src/content/blogPosts.ts",
+    "frontend/src/content/faq.ts",
+    "frontend/src/content/homeContent.ts",
+    "frontend/src/content/services.ts",
+    "frontend/src/content/testimonials.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/BlogPage.tsx",
+    "frontend/src/pages/BlogPostPage.tsx",
+    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/PricingPage.tsx",
+    "frontend/src/pages/PrivacyPolicyPage.tsx",
+    "frontend/src/pages/ServiceDetailPage.tsx",
+    "frontend/src/pages/ServicesPage.tsx",
+    "frontend/src/pages/TermsPage.tsx",
+    "frontend/src/pages/TestimonialsPage.tsx",
+    "frontend/src/utils/seo.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/src/utils/whatsapp.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

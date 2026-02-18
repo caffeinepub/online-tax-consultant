@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a modern, professional, trustworthy, SEO-optimized website for the Indian tax consultancy firm “Online Tax Consultant”, featuring clear service pages, strong CTAs, testimonials, FAQs, a blog, and a contact form with WhatsApp integration.",
+  "architectural_notes": [
+    "Use a clean, corporate visual style with a blue/white palette and subtle green accents to convey trust and financial growth.",
+    "SEO-first information architecture: use proper H1/H2 heading hierarchy and include meta tags per page.",
+    "Include conversion-focused CTAs prominently across key pages (consultation/ITR filing/talk to expert).",
+    "Contact workflow should support WhatsApp as a primary quick-contact channel."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimal corporate logo mark with wordmark “Online Tax Consultant” in blue/white with subtle green accent (otc-logo.dim_512x256.png)\n- Clean abstract finance-themed hero background with subtle geometric shapes in blue/white/green (hero-bg.dim_1920x1080.png)\n- Set of 7 simple outline-style service icons consistent in stroke and color accents (service-icons-sprite.dim_1024x1024.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-clean-modern-corporate-visual-theme-for-the-online-tax-consultant-website-using-blue-and-white-as-primary-colors-with-subtle-green-accents-apply-the-theme-consistently-across-typography-spacing-layout-and-component-styles-for-a-trustworthy-financial-services-look",
+      "title": "Create a clean, modern, corporate visual theme for the “Online Tax Consultant” website using blue and white as primary colors with subtle green accents; apply the theme consistently across typography, spacing, layout, and component styles for a trustworthy financial-services look.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-site-wide-navigation-and-routing-for-these-pages-home-services-overview-individual-service-detail-pages-7-services-pricing-testimonials-blog-contact-privacy-policy-and-terms-conditions",
+      "title": "Implement site-wide navigation and routing for these pages: Home, Services (overview), individual Service detail pages (7 services), Pricing, Testimonials, Blog, Contact, Privacy Policy, and Terms & Conditions.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-home-page-using-the-provided-seo-optimized-content-including-the-exact-h1-online-tax-consultant-trusted-tax-filing-gst-experts-in-india-the-provided-intro-paragraph-and-a-prominent-cta-area-that-includes-the-three-bullet-ctas-file-itr-in-minutes-get-gst-registration-in-3-days-free-tax-consultation-available",
+      "title": "Build the Home page using the provided SEO-optimized content, including: the exact H1 “Online Tax Consultant – Trusted Tax Filing & GST Experts in India”, the provided intro paragraph, and a prominent CTA area that includes the three bullet CTAs (File ITR in Minutes, Get GST Registration in 3 Days, Free Tax Consultation Available).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-strong-persistent-call-to-action-buttons-across-the-site-at-minimum-in-hero-header-and-at-relevant-sections-book-free-consultation-file-your-itr-now-and-talk-to-tax-expert-each-linking-to-the-contact-page-and-or-opening-the-whatsapp-flow-as-applicable",
+      "title": "Add strong, persistent call-to-action buttons across the site (at minimum in hero/header and at relevant sections): “Book Free Consultation”, “File Your ITR Now”, and “Talk to Tax Expert”, each linking to the Contact page and/or opening the WhatsApp flow (as applicable).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-services-overview-page-listing-all-7-services-with-short-summaries-key-benefits-and-internal-links-to-dedicated-service-detail-pages-include-the-provided-seo-keywords-and-the-provided-service-specific-content-for-each-service-detail-page",
+      "title": "Create a Services overview page listing all 7 services with short summaries, key benefits, and internal links to dedicated service detail pages; include the provided SEO keywords and the provided service-specific content for each service detail page.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-about-why-choose-us-section-using-the-provided-about-us-text-the-provided-target-keywords-and-the-why-choose-us-bullet-list-place-it-on-the-home-page-and-or-as-part-of-a-dedicated-about-section-within-the-home-page",
+      "title": "Add an About/Why Choose Us section using the provided About Us text, the provided target keywords, and the “Why Choose Us” bullet list; place it on the Home page and/or as part of a dedicated About section within the Home page.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-testimonials-section-and-dedicated-testimonials-page-featuring-multiple-testimonials-relevant-to-indian-individuals-and-small-businesses-ensure-the-section-is-professionally-styled-and-includes-a-cta",
+      "title": "Create a Testimonials section (and dedicated Testimonials page) featuring multiple testimonials relevant to Indian individuals and small businesses; ensure the section is professionally styled and includes a CTA.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-faq-section-using-the-5-provided-faq-questions-and-supply-clear-professional-answers-tailored-to-the-services-offered-place-the-faq-section-on-the-home-page-and-optionally-on-services-contact-pages-as-well",
+      "title": "Create an FAQ section using the 5 provided FAQ questions and supply clear, professional answers tailored to the services offered; place the FAQ section on the Home page and optionally on Services/Contact pages as well.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-page-with-a-contact-form-name-email-phone-service-interested-in-message-and-whatsapp-integration-via-a-whatsapp-click-to-chat-link-submitting-the-form-must-show-a-success-failure-state-in-the-ui",
+      "title": "Implement a Contact page with a contact form (name, email/phone, service interested in, message) and WhatsApp integration via a WhatsApp click-to-chat link; submitting the form must show a success/failure state in the UI.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-seo-basics-across-the-site-set-the-provided-meta-title-meta-description-and-meta-keywords-ensure-each-page-has-a-clear-h1-and-appropriate-h2-section-headings-ensure-service-pages-contain-keyword-rich-content-matching-the-provided-keyword-sets",
+      "title": "Implement SEO basics across the site: set the provided Meta Title, Meta Description, and Meta Keywords; ensure each page has a clear H1 and appropriate H2 section headings; ensure service pages contain keyword-rich content matching the provided keyword sets.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-blog-page-with-a-list-of-at-least-6-starter-posts-tax-saving-tips-itr-updates-gst-rules-themes-and-individual-blog-post-pages-with-readable-formatting-content-can-be-static-no-cms-required",
+      "title": "Create a Blog page with a list of at least 6 starter posts (Tax Saving Tips, ITR Updates, GST Rules themes) and individual blog post pages with readable formatting; content can be static (no CMS required).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-pricing-page-with-clear-professional-pricing-tiers-for-at-least-itr-filing-gst-filing-and-business-registration-include-disclaimers-that-final-pricing-may-vary-by-complexity-and-a-cta-to-contact-whatsapp-for-a-quote",
+      "title": "Create a Pricing page with clear, professional pricing tiers for at least: ITR filing, GST filing, and Business registration; include disclaimers that final pricing may vary by complexity and a CTA to contact/WhatsApp for a quote.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-privacy-policy-and-terms-conditions-pages-with-professional-generic-content-suitable-for-an-indian-online-tax-consultancy-website-no-external-integrations-implied-and-include-these-links-in-the-site-footer",
+      "title": "Add Privacy Policy and Terms & Conditions pages with professional, generic content suitable for an Indian online tax consultancy website (no external integrations implied) and include these links in the site footer.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create clean, corporate website UI using blue/white with subtle green accents for “Online Tax Consultant” targeting Indian individuals and small businesses",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Homepage with SEO-optimized H1/H2 content and prominent CTAs (Book Free Consultation, File Your ITR Now, Talk to Tax Expert)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Service pages for ITR filing, GST registration & filing, business registration, tax planning & advisory, TDS return filing, accounting & bookkeeping, notice & compliance handling",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add Testimonials section/page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add FAQ section with provided questions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Contact form with WhatsApp integration",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Implement SEO basics: meta title/description/keywords, proper headings, and keyword-rich content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add additional pages: Blog, Pricing, Privacy Policy, Terms & Conditions, Contact",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Add backend support to store contact form submissions (“leads”) in the single Motoko actor, including creating a lead record with timestamp and returning an acknowledgement; expose query methods to list leads for admin/debug purposes (no public admin UI required).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Online Tax Consultant",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

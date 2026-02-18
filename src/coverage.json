@@ -1,0 +1,373 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-18T07:39:55.150Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 14,
+    "implemented": 13,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Create a clean, modern, corporate visual theme for the “Online Tax Consultant” website using blue and white as primary colors with subtle green accents; apply the theme consistently across typography, spacing, layout, and component styles for a trustworthy financial-services look.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/layout/SiteLayout.tsx",
+          "frontend/public/assets/generated/otc-logo.dim_512x256.png",
+          "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+          "frontend/public/assets/generated/service-icons-sprite.dim_1024x1024.png"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/layout/SiteLayout.tsx",
+          "frontend/public/assets/generated/otc-logo.dim_512x256.png",
+          "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+          "frontend/public/assets/generated/service-icons-sprite.dim_1024x1024.png"
+        ]
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Add backend support to store contact form submissions (“leads”) in the single Motoko actor, including creating a lead record with timestamp and returning an acknowledgement; expose query methods to list leads for admin/debug purposes (no public admin UI required).",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Implement SEO basics across the site: set the provided Meta Title, Meta Description, and Meta Keywords; ensure each page has a clear H1 and appropriate H2 section headings; ensure service pages contain keyword-rich content matching the provided keyword sets.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html",
+          "frontend/src/utils/seo.ts",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/ServicesPage.tsx",
+          "frontend/src/pages/ServiceDetailPage.tsx",
+          "frontend/src/pages/BlogPage.tsx",
+          "frontend/src/pages/BlogPostPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/index.html",
+          "frontend/src/utils/seo.ts",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/ServicesPage.tsx",
+          "frontend/src/pages/ServiceDetailPage.tsx",
+          "frontend/src/pages/BlogPage.tsx",
+          "frontend/src/pages/BlogPostPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Create a Blog page with a list of at least 6 starter posts (Tax Saving Tips, ITR Updates, GST Rules themes) and individual blog post pages with readable formatting; content can be static (no CMS required).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/content/blogPosts.ts",
+          "frontend/src/pages/BlogPage.tsx",
+          "frontend/src/pages/BlogPostPage.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/content/blogPosts.ts",
+          "frontend/src/pages/BlogPage.tsx",
+          "frontend/src/pages/BlogPostPage.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Create a Pricing page with clear, professional pricing tiers for at least: ITR filing, GST filing, and Business registration; include disclaimers that final pricing may vary by complexity and a CTA to contact/WhatsApp for a quote.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/PricingPage.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/PricingPage.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Add Privacy Policy and Terms & Conditions pages with professional, generic content suitable for an Indian online tax consultancy website (no external integrations implied) and include these links in the site footer.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/PrivacyPolicyPage.tsx",
+          "frontend/src/pages/TermsPage.tsx",
+          "frontend/src/components/layout/Footer.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/PrivacyPolicyPage.tsx",
+          "frontend/src/pages/TermsPage.tsx",
+          "frontend/src/components/layout/Footer.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Implement site-wide navigation and routing for these pages: Home, Services (overview), individual Service detail pages (7 services), Pricing, Testimonials, Blog, Contact, Privacy Policy, and Terms & Conditions.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/layout/Header.tsx",
+          "frontend/src/components/layout/Footer.tsx",
+          "frontend/src/components/layout/SiteLayout.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/layout/Header.tsx",
+          "frontend/src/components/layout/Footer.tsx",
+          "frontend/src/components/layout/SiteLayout.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Build the Home page using the provided SEO-optimized content, including: the exact H1 “Online Tax Consultant – Trusted Tax Filing & GST Experts in India”, the provided intro paragraph, and a prominent CTA area that includes the three bullet CTAs (File ITR in Minutes, Get GST Registration in 3 Days, Free Tax Consultation Available).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/content/homeContent.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/content/homeContent.ts"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add strong, persistent call-to-action buttons across the site (at minimum in hero/header and at relevant sections): “Book Free Consultation”, “File Your ITR Now”, and “Talk to Tax Expert”, each linking to the Contact page and/or opening the WhatsApp flow (as applicable).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/cta/PrimaryCtas.tsx",
+          "frontend/src/utils/whatsapp.ts",
+          "frontend/src/components/layout/Header.tsx",
+          "frontend/src/pages/ServicesPage.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/utils/whatsapp.ts",
+          "frontend/src/components/layout/Header.tsx",
+          "frontend/src/pages/ServicesPage.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Create a Services overview page listing all 7 services with short summaries, key benefits, and internal links to dedicated service detail pages; include the provided SEO keywords and the provided service-specific content for each service detail page.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/content/services.ts",
+          "frontend/src/pages/ServicesPage.tsx",
+          "frontend/src/pages/ServiceDetailPage.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/content/services.ts",
+          "frontend/src/pages/ServicesPage.tsx",
+          "frontend/src/pages/ServiceDetailPage.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Add an About/Why Choose Us section using the provided About Us text, the provided target keywords, and the “Why Choose Us” bullet list; place it on the Home page and/or as part of a dedicated About section within the Home page.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/content/about.ts",
+          "frontend/src/components/sections/AboutWhyChooseUsSection.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/content/about.ts",
+          "frontend/src/components/sections/AboutWhyChooseUsSection.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Create a Testimonials section (and dedicated Testimonials page) featuring multiple testimonials relevant to Indian individuals and small businesses; ensure the section is professionally styled and includes a CTA.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/content/testimonials.ts",
+          "frontend/src/components/sections/TestimonialsSection.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/TestimonialsPage.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/content/testimonials.ts",
+          "frontend/src/components/sections/TestimonialsSection.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/TestimonialsPage.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Create an FAQ section using the 5 provided FAQ questions and supply clear, professional answers tailored to the services offered; place the FAQ section on the Home page and optionally on Services/Contact pages as well.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/content/faq.ts",
+          "frontend/src/components/sections/FaqSection.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/content/faq.ts",
+          "frontend/src/components/sections/FaqSection.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Implement a Contact page with a contact form (name, email/phone, service interested in, message) and WhatsApp integration via a WhatsApp click-to-chat link; submitting the form must show a success/failure state in the UI.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/ContactPage.tsx",
+          "frontend/src/hooks/useSubmitLead.ts",
+          "frontend/src/components/forms/LeadForm.tsx",
+          "frontend/src/pages/ContactPage.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/ContactPage.tsx",
+          "frontend/src/pages/ContactPage.tsx",
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/authorization/MixinAuthorization.mo",
+    "backend/authorization/access-control.mo",
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+    "frontend/public/assets/generated/otc-logo.dim_512x256.png",
+    "frontend/public/assets/generated/service-icons-sprite.dim_1024x1024.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/layout/Header.tsx",
+    "frontend/src/components/layout/SiteLayout.tsx",
+    "frontend/src/components/sections/AboutWhyChooseUsSection.tsx",
+    "frontend/src/components/sections/FaqSection.tsx",
+    "frontend/src/components/sections/TestimonialsSection.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/content/about.ts",
+    "frontend/src/content/blogPosts.ts",
+    "frontend/src/content/faq.ts",
+    "frontend/src/content/homeContent.ts",
+    "frontend/src/content/services.ts",
+    "frontend/src/content/testimonials.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/BlogPage.tsx",
+    "frontend/src/pages/BlogPostPage.tsx",
+    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/PricingPage.tsx",
+    "frontend/src/pages/PrivacyPolicyPage.tsx",
+    "frontend/src/pages/ServiceDetailPage.tsx",
+    "frontend/src/pages/ServicesPage.tsx",
+    "frontend/src/pages/TermsPage.tsx",
+    "frontend/src/pages/TestimonialsPage.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/src/utils/seo.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/src/utils/whatsapp.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

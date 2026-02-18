@@ -1,0 +1,286 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-clean-modern-corporate-visual-theme-for-the-online-tax-consultant-website-using-blue-and-white-as-primary-colors-with-subtle-green-accents-apply-the-theme-consistently-across-typography-spacing-layout-and-component-styles-for-a-trustworthy-financial-services-look",
+      "featureTitle": "Create a clean, modern, corporate visual theme for the “Online Tax Consultant” website using blue and white as primary colors with subtle green accents; apply the theme consistently across typography, spacing, layout, and component styles for a trustworthy financial-services look.",
+      "files": [
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-site-wide-navigation-and-routing-for-these-pages-home-services-overview-individual-service-detail-pages-7-services-pricing-testimonials-blog-contact-privacy-policy-and-terms-conditions",
+      "featureTitle": "Implement site-wide navigation and routing for these pages: Home, Services (overview), individual Service detail pages (7 services), Pricing, Testimonials, Blog, Contact, Privacy Policy, and Terms & Conditions.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/Footer.tsx",
+        "frontend/src/components/layout/Header.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-home-page-using-the-provided-seo-optimized-content-including-the-exact-h1-online-tax-consultant-trusted-tax-filing-gst-experts-in-india-the-provided-intro-paragraph-and-a-prominent-cta-area-that-includes-the-three-bullet-ctas-file-itr-in-minutes-get-gst-registration-in-3-days-free-tax-consultation-available",
+      "featureTitle": "Build the Home page using the provided SEO-optimized content, including: the exact H1 “Online Tax Consultant – Trusted Tax Filing & GST Experts in India”, the provided intro paragraph, and a prominent CTA area that includes the three bullet CTAs (File ITR in Minutes, Get GST Registration in 3 Days, Free Tax Consultation Available).",
+      "files": [
+        "frontend/src/content/homeContent.ts",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-strong-persistent-call-to-action-buttons-across-the-site-at-minimum-in-hero-header-and-at-relevant-sections-book-free-consultation-file-your-itr-now-and-talk-to-tax-expert-each-linking-to-the-contact-page-and-or-opening-the-whatsapp-flow-as-applicable",
+      "featureTitle": "Add strong, persistent call-to-action buttons across the site (at minimum in hero/header and at relevant sections): “Book Free Consultation”, “File Your ITR Now”, and “Talk to Tax Expert”, each linking to the Contact page and/or opening the WhatsApp flow (as applicable).",
+      "files": [
+        "frontend/src/components/layout/Header.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ServicesPage.tsx",
+        "frontend/src/utils/whatsapp.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-services-overview-page-listing-all-7-services-with-short-summaries-key-benefits-and-internal-links-to-dedicated-service-detail-pages-include-the-provided-seo-keywords-and-the-provided-service-specific-content-for-each-service-detail-page",
+      "featureTitle": "Create a Services overview page listing all 7 services with short summaries, key benefits, and internal links to dedicated service detail pages; include the provided SEO keywords and the provided service-specific content for each service detail page.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/content/services.ts",
+        "frontend/src/pages/ServiceDetailPage.tsx",
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-about-why-choose-us-section-using-the-provided-about-us-text-the-provided-target-keywords-and-the-why-choose-us-bullet-list-place-it-on-the-home-page-and-or-as-part-of-a-dedicated-about-section-within-the-home-page",
+      "featureTitle": "Add an About/Why Choose Us section using the provided About Us text, the provided target keywords, and the “Why Choose Us” bullet list; place it on the Home page and/or as part of a dedicated About section within the Home page.",
+      "files": [
+        "frontend/src/components/sections/AboutWhyChooseUsSection.tsx",
+        "frontend/src/content/about.ts",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-testimonials-section-and-dedicated-testimonials-page-featuring-multiple-testimonials-relevant-to-indian-individuals-and-small-businesses-ensure-the-section-is-professionally-styled-and-includes-a-cta",
+      "featureTitle": "Create a Testimonials section (and dedicated Testimonials page) featuring multiple testimonials relevant to Indian individuals and small businesses; ensure the section is professionally styled and includes a CTA.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/TestimonialsSection.tsx",
+        "frontend/src/content/testimonials.ts",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/TestimonialsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-faq-section-using-the-5-provided-faq-questions-and-supply-clear-professional-answers-tailored-to-the-services-offered-place-the-faq-section-on-the-home-page-and-optionally-on-services-contact-pages-as-well",
+      "featureTitle": "Create an FAQ section using the 5 provided FAQ questions and supply clear, professional answers tailored to the services offered; place the FAQ section on the Home page and optionally on Services/Contact pages as well.",
+      "files": [
+        "frontend/src/components/sections/FaqSection.tsx",
+        "frontend/src/content/faq.ts",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-contact-page-with-a-contact-form-name-email-phone-service-interested-in-message-and-whatsapp-integration-via-a-whatsapp-click-to-chat-link-submitting-the-form-must-show-a-success-failure-state-in-the-ui",
+      "featureTitle": "Implement a Contact page with a contact form (name, email/phone, service interested in, message) and WhatsApp integration via a WhatsApp click-to-chat link; submitting the form must show a success/failure state in the UI.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-seo-basics-across-the-site-set-the-provided-meta-title-meta-description-and-meta-keywords-ensure-each-page-has-a-clear-h1-and-appropriate-h2-section-headings-ensure-service-pages-contain-keyword-rich-content-matching-the-provided-keyword-sets",
+      "featureTitle": "Implement SEO basics across the site: set the provided Meta Title, Meta Description, and Meta Keywords; ensure each page has a clear H1 and appropriate H2 section headings; ensure service pages contain keyword-rich content matching the provided keyword sets.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/pages/BlogPage.tsx",
+        "frontend/src/pages/BlogPostPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ServiceDetailPage.tsx",
+        "frontend/src/pages/ServicesPage.tsx",
+        "frontend/src/utils/seo.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-blog-page-with-a-list-of-at-least-6-starter-posts-tax-saving-tips-itr-updates-gst-rules-themes-and-individual-blog-post-pages-with-readable-formatting-content-can-be-static-no-cms-required",
+      "featureTitle": "Create a Blog page with a list of at least 6 starter posts (Tax Saving Tips, ITR Updates, GST Rules themes) and individual blog post pages with readable formatting; content can be static (no CMS required).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/content/blogPosts.ts",
+        "frontend/src/pages/BlogPage.tsx",
+        "frontend/src/pages/BlogPostPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-pricing-page-with-clear-professional-pricing-tiers-for-at-least-itr-filing-gst-filing-and-business-registration-include-disclaimers-that-final-pricing-may-vary-by-complexity-and-a-cta-to-contact-whatsapp-for-a-quote",
+      "featureTitle": "Create a Pricing page with clear, professional pricing tiers for at least: ITR filing, GST filing, and Business registration; include disclaimers that final pricing may vary by complexity and a CTA to contact/WhatsApp for a quote.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/PricingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-privacy-policy-and-terms-conditions-pages-with-professional-generic-content-suitable-for-an-indian-online-tax-consultancy-website-no-external-integrations-implied-and-include-these-links-in-the-site-footer",
+      "featureTitle": "Add Privacy Policy and Terms & Conditions pages with professional, generic content suitable for an Indian online tax consultancy website (no external integrations implied) and include these links in the site footer.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/Footer.tsx",
+        "frontend/src/pages/PrivacyPolicyPage.tsx",
+        "frontend/src/pages/TermsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
